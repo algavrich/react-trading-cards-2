@@ -63,8 +63,8 @@ function AddTradingCard(props) {
     .then((jsonResponse) => {
       const cardAdded = jsonResponse.cardAdded;
       props.updateCard(cardAdded);
-      document.querySelector('#nameInput').value = "";
-      document.querySelector('#skillInput').value = "";
+      setName('');
+      setSkill('');
     });
   }
   return (
